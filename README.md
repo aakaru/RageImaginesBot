@@ -1,4 +1,4 @@
-# RageImaginesBot 🎨🤖
+# RageImaginesBot 
 
 A powerful Telegram bot that transforms your text descriptions into stunning AI-generated images using Cloudflare Workers AI and n8n automation.
 
@@ -31,11 +31,19 @@ While currently in development, the bot's architecture supports robust error han
 
 ## 🔧 Technical Architecture
 
+![n8n Workflow](workflow.jpeg)
+
 - **Platform**: n8n automation workflow
 - **AI Engine**: Cloudflare Workers AI (Stable Diffusion XL)
 - **Messaging**: Telegram Bot API
 - **Data Handling**: JavaScript for binary data conversion
 - **Deployment**: Serverless architecture
+
+### Workflow Components:
+1. **Telegram Trigger**: Receives user messages and prompts
+2. **HTTP Request**: Sends prompts to Cloudflare Workers AI API
+3. **Code Node**: Handles binary data conversion for image processing
+4. **Send Photo Message**: Delivers generated images back to Telegram chat
 
 ## 📊 Usage Limits
 
